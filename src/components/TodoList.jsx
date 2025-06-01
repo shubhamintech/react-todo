@@ -56,8 +56,9 @@ function TodoApp()
             </div>
 
             <ul style={styles.list}>
-                {todos.map(todo => (
+                {todos.map((todo,index) => (
                     <li key={todo.id} style={styles.listItem}>
+                        <span>{++index}</span>
                         <span style={{ flex: 1 }}>{todo.text}</span>
                         <button onClick={() => handleEdit(todo.id)} style={styles.editButton}>Edit</button>
                         <button onClick={() => handleDelete(todo.id)} style={styles.deleteButton}>Delete</button>
